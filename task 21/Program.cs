@@ -1,8 +1,8 @@
 ﻿
-int[] CoordEnter(string dotname)
+double[] CoordEnter(string dotname)                   //метод для ввода координат 
 {
     System.Console.WriteLine($"Введите координаты точки {dotname} (X, Y, Z)");
-    int[] resultarr = new int[3];
+    double[] resultarr = new double[3];
     for (int i = 0; i < resultarr.Length; i++)
     {
         resultarr[i] = Convert.ToInt32(Console.ReadLine());
@@ -10,30 +10,19 @@ int[] CoordEnter(string dotname)
     return resultarr;
 }
 
-// void PrintArr(int[] arr)
-// {
-//     for (int i = 0; i < arr.Length; i++)
-//     {
-//         System.Console.Write($" {arr[i]}");
-//     }
-// }
-
-int Distance(int[] dot1, int[] dot2)
+double Distance(double[] dot1, double[] dot2)
 {
-    int[] deltas = new int[3];
+    double[] deltas = new double[3];
     for (int i = 0; i < 3; i++)
     {
         deltas[i] = dot1[i] - dot2[i];
     }
-    double result = Math.Sqrt(Math.Pow(deltas[0], 2) + Math.Pow(deltas[1], 2) + Math.Pow(deltas[2], 2));
+    double result = Math.Sqrt(Math.Pow(deltas[0], 2) + Math.Pow(deltas[1], 2) + Math.Pow(deltas[2], 2));       //Считаем по формуле аналогичной Пифагору
     return result;
 }
 
 
-int[] dotcoordA = CoordEnter("A");
-int[] dotcoordB = CoordEnter("B");
-
+double[] dotcoordA = CoordEnter("A");
+double[] dotcoordB = CoordEnter("B");
+System.Console.Write("Расстояние между точками - ");
 System.Console.WriteLine(Distance(dotcoordA,dotcoordB));
-
-PrintArr(dotcoordA);
-
