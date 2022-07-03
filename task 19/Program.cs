@@ -30,9 +30,9 @@ string Reverse(string word)                //разворачиваем пред
 
 int num = testFor5Simb();
 
-string rev = Reverse(Convert.ToString(num));//сравниваем изначальное с развернутым
+string rev = Reverse(Convert.ToString(num));
 
-if (rev == Convert.ToString(num))
+if (rev == Convert.ToString(num)) //сравниваем изначальное с развернутым
 {
     System.Console.WriteLine("Введенное число палиндром");
 }
