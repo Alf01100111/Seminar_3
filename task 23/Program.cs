@@ -8,6 +8,7 @@ void CubeTable(int num)
         int result = i * i * i;
         Console.Write($"{result},");
     }
+    Console.Write("\b\b");
 }
 
 CubeTable(number);
